@@ -1,5 +1,6 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux';
+import { REMOVE_VIEW } from '../../actions/types';
 import { getSelected } from '../../actions/viewSelectors';
 import './style.scss'
 
@@ -8,7 +9,20 @@ const Sidebar = ({ isOpen }) => {
   console.log(selectedViews)
   return (
     <div className={`sidebar_container${isOpen ? ' open' : ''}`}>
-      <h1>sidebar</h1>
+      {selectedViews.map(view => (
+        <Menu view={view}/>
+      ))}
+    </div>
+  )
+}
+
+const Menu = ({ view: {name, id, size} }) => {
+  const dispatch = useDispatch();
+
+  return (
+    <div className="menu">
+      <span>{name}</span>
+      <span className='close' onClick={() => dispatch({type: REMOVE_VIEW, payload: { id }})}>X</span>
     </div>
   )
 }
