@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Provider } from 'react-redux';
+import store from './store';
 import './styles/global.scss';
 //components
 import Header from './components/header';
@@ -11,13 +13,15 @@ const App = () => {
   const toggleSidebar = () => setIsOpen(!isOpen);
 
   return (
-    <div className="App">
-      <Header toggleSidebar={toggleSidebar}/>
-      <div className="main_container">
-        <Sidebar isOpen={isOpen}/>
-        <Views />
+    <Provider store={store}>
+      <div className="App">
+        <Header toggleSidebar={toggleSidebar}/>
+        <div className="main_container">
+          <Sidebar isOpen={isOpen}/>
+          <Views />
+        </div>
       </div>
-    </div>
+    </Provider>
   );
 }
 
