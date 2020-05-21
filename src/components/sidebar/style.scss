@@ -1,7 +1,12 @@
+@import '../../styles/variables';
+
 .sidebar_container {
   height: calc(100vh - 60px);
   width: 300px;
   transition: all .2s linear;
+  background: $grey2;
+  position: relative;
+  box-shadow: 0px 7px 6px 2px #616161;
 
   &.open {
     transform: translateX(-300px);
@@ -11,14 +16,20 @@
   }
 
   .menu {
-    margin: 10px;
-    padding: 10px;
-    border-radius: 6px;
-    box-shadow: 1px 1px 4px 0px black;
+    margin: 15px 10px;
+    padding: 15px;
+    border-radius: 14px;
+    box-shadow: $box-shadow-menu;
     display: flex;
     justify-content: space-between;
+    background: $grey2;
+    transition: all .1s linear;
+    color: $grey3;
     .close {
       cursor: pointer;
+    }
+    &:hover {
+      transform: scale(1.05);
     }
   }
 }

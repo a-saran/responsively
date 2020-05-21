@@ -1,4 +1,6 @@
 .views_container {
+  flex: 1;
+  padding: 10px;
   width: 100%;
   background-image: linear-gradient(to right, #666667 1px, transparent 1px), linear-gradient(#666667 1px, transparent 1px);
   background-size: 15px 15px;
