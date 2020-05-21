@@ -1,10 +1,12 @@
 import React from 'react';
-import './App.css';
+import './styles/global.scss';
+//components
+import Header from './components/header';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <h1>main app</h1>
+      <Header />
     </div>
   );
 }
