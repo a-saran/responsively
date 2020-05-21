@@ -1,5 +1,11 @@
 .sidebar_container {
   height: calc(100vh - 60px);
-  width: 350px;
+  width: 300px;
   border: 1px solid red;
+  transition: all .4s linear;
+
+  &.open {
+    width: 0;
+    overflow: hidden;
+  }
 }

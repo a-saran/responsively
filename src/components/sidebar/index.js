@@ -1,9 +1,9 @@
 import React from 'react'
 import './style.scss'
 
-const Sidebar = () => {
+const Sidebar = ({ isOpen }) => {
   return (
-    <div className='sidebar_container'>
+    <div className={`sidebar_container${isOpen ? ' open' : ''}`}>
       <h1>sidebar</h1>
     </div>
   )

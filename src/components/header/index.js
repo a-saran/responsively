@@ -1,10 +1,10 @@
 import React from 'react'
 import './style.scss'
 
-const Header = () => {
+const Header = ({ toggleSidebar }) => {
   return (
     <div className='header'>
-      <p>header</p>
+      <button onClick={toggleSidebar}>toggle Sidebar</button>
     </div>
   )
 }
