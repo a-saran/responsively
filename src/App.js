@@ -5,7 +5,7 @@ import './styles/global.scss';
 //components
 import Header from './components/header';
 import Sidebar from './components/sidebar';
-import Views from './components/views';
+import Views from './components/viewsContainer';
 
 const App = () => {
   const [ isOpen, setIsOpen ] = useState(false);

@@ -1,0 +1,12 @@
+@import '../../styles/variables';
+
+.views_container {
+  flex: 1;
+  padding: 10px;
+  width: 100%;
+  background-image: linear-gradient(to right, #404040 1px, transparent 1px), linear-gradient(#404040 1px, transparent 1px);
+  background-size: 15px 15px;
+  background-color: $grey2;
+  overflow: scroll;
+  display: flex;
+}

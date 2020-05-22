@@ -9,6 +9,7 @@
   display: flex;
   flex-direction: column;
   transition: all .2s ease-in-out;
+  box-shadow: $box-shadow-viewport;
 
   .options {
     display: flex;
