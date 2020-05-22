@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Menu = ({ onClick }) => {
+const Menu = ({ onClick, isOpen }) => {
   return (
-    <div className='hamburger-menu' onClick={onClick}>
+    <div className={`hamburger-menu ${!isOpen ? 'open': 'close'}`} onClick={onClick}>
       <div />
       <div />
       <div />

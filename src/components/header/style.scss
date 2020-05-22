@@ -10,17 +10,51 @@
   display: flex;
   align-items: center;
   // justify-content: center;
-
+ 
   .hamburger-menu {
     width: 30px;
     cursor: pointer;
 
     div {
       margin-bottom: 5px;
-      background: $white;
       height: 3px;
       width: 100%;
       border-radius: 5px;
+      transition: all .1s ease-in;
+      box-shadow: 0px 0 4px 0px $grey3, -1px -1px 6px 0px #000000;
+    }
+  
+
+    &:hover {
+      &.open {
+        div {
+          &:first-of-type {
+            transform: rotate(-45deg);
+            width: 20px;
+          }
+          &:nth-child(2) {
+            margin-left: 5px;
+          }
+          &:last-child {
+            transform: rotate(45deg);
+            width: 20px;
+          }
+        }
+      }
+      &.close {
+        div {
+          &:first-of-type {
+            transform: rotate(45deg);
+            width: 20px;
+            margin-left: 18px;
+          }
+          &:last-child {
+            transform: rotate(-45deg);
+            width: 20px;
+            margin-left: 18px;
+          }
+        }
+      }
     }
   }
 }

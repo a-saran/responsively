@@ -15,7 +15,7 @@ const App = () => {
   return (
     <Provider store={store}>
       <div className="App">
-        <Header toggleSidebar={toggleSidebar}/>
+        <Header toggleSidebar={toggleSidebar} isOpen={isOpen}/>
         <div className="main_container">
           <Sidebar isOpen={isOpen}/>
           <Views />
