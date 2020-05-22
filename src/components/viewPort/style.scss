@@ -1,5 +1,23 @@
+@import '../../styles/variables.scss';
 .viewport {
-  display: inline-block;
   margin: 5px;
   height: max-content;
+  background: $grey3;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  transition: all .2s ease-in-out;
+
+  .options {
+    .zoom {
+      cursor: pointer;
+      border: 1px solid #ddd;
+      padding: 10px;
+    }
+  }
+
+  // &:last-child {
+  //   margin-right: 30px;
+  // }
 }

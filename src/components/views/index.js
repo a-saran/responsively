@@ -10,7 +10,7 @@ const Views = () => {
 
   return (
     <div className='views_container'>
-      {selectedViews.map(view => (<ViewPort view={view} link={link}/>))}
+      {selectedViews.map((view, i) => (<ViewPort key={i} keyValue={i} view={view} link={link}/>))}
     </div>
   )
 }
