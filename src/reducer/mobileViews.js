@@ -1,7 +1,7 @@
 import { REMOVE_VIEW, ADD_VIEW, SET_LINK } from '../actions/types';
 
 const initialState = {
-  link: 'https://codebrahma.com/',
+  link: 'https://asaran97.ga/',
   initialViews: [
     {
       id: 1,
@@ -56,9 +56,14 @@ const initialState = {
       name: 'moto G4'
     },
     {
-      id: 3,
-      size: '360x640',
-      name: 'galaxy S5'
+      id: 4,
+      size: '411x731',
+      name: 'pixel 2'
+    },
+    {
+      id: 8,
+      size: '375x812',
+      name: 'iphone X'
     },
   ],
 }
