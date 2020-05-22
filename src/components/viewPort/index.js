@@ -22,6 +22,7 @@ const ViewPort = ({
       <div className="options">
         {/* TODO */}
           {/* dragHandle */}
+          {/* reload button */}
         <span className='zoom' onClick={increaseZoom} > + </span>
         <span className='zoom' onClick={decreaseZoom} > - </span>
         <span onClick={() => setRotate(!rotate)}>rotate</span>
@@ -31,7 +32,7 @@ const ViewPort = ({
       <iframe
         src={link}
         title={name}
-        frameborder="0"
+        frameBorder="0"
         height={rotate ? width : height}
         width={rotate? height : width}
       />

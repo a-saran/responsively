@@ -1,7 +1,7 @@
 import { REMOVE_VIEW, ADD_VIEW, SET_LINK } from '../actions/types';
 
 const initialState = {
-  link: 'https://asaran97.ga/',
+  link: 'https://codebrahma.com/',
   initialViews: [
     {
       id: 1,

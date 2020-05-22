@@ -6,11 +6,11 @@ import './style.scss'
 
 const Sidebar = ({ isOpen }) => {
   const selectedViews = useSelector(getSelected); 
-  console.log(selectedViews)
+
   return (
     <div className={`sidebar_container${isOpen ? ' open' : ''}`}>
       {selectedViews.map(view => (
-        <Menu view={view}/>
+        <Menu key={view.id} view={view}/>
       ))}
     </div>
   )
