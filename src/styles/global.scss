@@ -20,4 +20,5 @@ p, h1, h2, h3, h4 {
 
 .main_container {
   display: flex;
+  height: calc(100vh - 60px);
 }
