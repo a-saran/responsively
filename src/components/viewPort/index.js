@@ -4,7 +4,7 @@ import { getHeightAndWidth } from '../../utils';
 import { useDispatch } from 'react-redux';
 import { REMOVE_VIEW } from '../../actions/types';
 import { SortableElement, SortableHandle } from 'react-sortable-hoc';
-import { DragIcon, PlusIcon, MinusIcon, RotateIcon } from '../icons/index';
+import { DragIcon, PlusIcon, MinusIcon, RotateIcon, RefreshIcon } from '../icons/index';
 
 const DragHandle = SortableHandle(() => (
   <div className="drag-handle">
@@ -35,6 +35,7 @@ const ViewPort = ({
           <span className='zoom' onClick={increaseZoom} title='Zoom in'><PlusIcon /></span>
           <span className='zoom' onClick={decreaseZoom} title='Zoom out'><MinusIcon /></span>
           <span onClick={() => setRotate(!rotate)} title='Rotate'><RotateIcon /></span>
+          <RefreshIcon />
           <span onClick={deleteView} title='Delete'> {' '}Delete</span>
         </div>
 
