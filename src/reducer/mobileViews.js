@@ -6,7 +6,7 @@ import {
 } from '../actions/types';
 
 const initialState = {
-  link: 'https://codebrahma.com/',
+  link: 'https://saran.work/',
   initialViews: [
     {
       id: 1,
