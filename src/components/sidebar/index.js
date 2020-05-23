@@ -1,30 +1,35 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux';
-import { REMOVE_VIEW } from '../../actions/types';
+import { SortableContainer } from 'react-sortable-hoc';
+import { arrayMove } from '../../utils';
 import { getSelected } from '../../actions/viewSelectors';
 import './style.scss'
+import Menu from './Menu';
+import { SET_SELECTED } from '../../actions/types';
+
+const Container = SortableContainer(({ children, isOpen }) => (
+  <div className={`sidebar_container${isOpen ? ' open' : ''}`}>
+    {children}
+  </div>
+));
 
 const Sidebar = ({ isOpen }) => {
   const selectedViews = useSelector(getSelected); 
-
-  return (
-    <div className={`sidebar_container${isOpen ? ' open' : ''}`}>
-      {selectedViews.map(view => (
-        <Menu key={view.id} view={view}/>
-      ))}
-    </div>
-  )
-}
-
-const Menu = ({ view: {name, id, size} }) => {
   const dispatch = useDispatch();
 
+  const onSortEnd = ({ oldIndex, newIndex }) => {
+    const newArray = arrayMove(selectedViews, oldIndex, newIndex);
+    dispatch({ type:SET_SELECTED, payload: { newViews: newArray } })
+  }
+
   return (
-    <div className="menu">
-      <span>{name}</span>
-      <span className='close' onClick={() => dispatch({type: REMOVE_VIEW, payload: { id }})}>X</span>
-    </div>
+    <Container isOpen={isOpen} onSortEnd={onSortEnd} useDragHandle>
+      {selectedViews.map((view, index) => (
+        <Menu key={view.id} view={view} index={index} />
+      ))}
+    </Container>
   )
 }
+
 
 export default Sidebar

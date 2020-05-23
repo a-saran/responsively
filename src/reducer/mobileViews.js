@@ -1,4 +1,9 @@
-import { REMOVE_VIEW, ADD_VIEW, SET_LINK } from '../actions/types';
+import {
+  REMOVE_VIEW,
+  ADD_VIEW,
+  SET_LINK,
+  SET_SELECTED
+} from '../actions/types';
 
 const initialState = {
   link: 'https://codebrahma.com/',
@@ -96,6 +101,11 @@ export default function(state=initialState, action) {
       return {
         ...state,
         link: payload.link,
+      }
+    case SET_SELECTED:
+      return {
+        ...state,
+        selectedViews: payload.newViews,
       }
 
     default: 
