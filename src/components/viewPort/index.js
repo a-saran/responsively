@@ -34,9 +34,9 @@ const ViewPort = ({
           <DragHandle />
           <span className='zoom' onClick={increaseZoom} title='Zoom in'><PlusIcon /></span>
           <span className='zoom' onClick={decreaseZoom} title='Zoom out'><MinusIcon /></span>
-          <span onClick={() => setRotate(!rotate)} title='Rotate'><RotateIcon /></span>
-          <RefreshIcon />
-          <span onClick={deleteView} title='Delete'> <RemoveIcon /></span>
+          <span className='rotate' onClick={() => setRotate(!rotate)} title='Rotate'><RotateIcon /></span>
+          <span className='refresh' title='Refresh'><RefreshIcon /></span>
+          <span className='remove' onClick={deleteView} title='Delete'> <RemoveIcon /></span>
         </div>
 
         <iframe

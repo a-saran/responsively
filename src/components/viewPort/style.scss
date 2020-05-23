@@ -13,11 +13,12 @@
 
   .options {
     display: flex;
+    justify-content: space-around;
+    align-items: center;
     margin-bottom: 5px;
-    .zoom {
+    padding: 5px;
+    .zoom, .rotate, .refresh, .remove {
       cursor: pointer;
-      border: 1px solid #ddd;
-      padding: 10px;
     }
   }
 
