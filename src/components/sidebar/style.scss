@@ -2,7 +2,7 @@
 
 .sidebar_container {
   height: calc(100vh - 60px);
-  width: 300px;
+  width: 270px;
   transition: all .2s linear;
   background: $grey2;
   position: relative;
@@ -17,7 +17,7 @@
 
   .menu {
     margin: 15px 10px;
-    padding: 15px;
+    padding: 10px 15px;
     border-radius: 14px;
     box-shadow: $box-shadow-menu;
     display: flex;
@@ -25,6 +25,7 @@
     background: $grey2;
     transition: all .1s linear;
     color: $grey3;
+    box-sizing: border-box;
     .close {
       cursor: pointer;
     }

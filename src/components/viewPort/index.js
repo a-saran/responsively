@@ -27,27 +27,26 @@ const ViewPort = ({
 
   return (
     <div>
-    <div className='viewport' style={{ transform: `scale(${zoom})` }}>
-      <div className="options">
-        {/* TODO */}
-          {/* dragHandle */}
-          {/* reload button */}
+      <div className='viewport' style={{ transform: `scale(${zoom})` }}>
+        <div className="options">
+          {/* TODO */}
+            {/* reload button */}
           <DragHandle />
-        <span className='zoom' onClick={increaseZoom} > + </span>
-        <span className='zoom' onClick={decreaseZoom} > - </span>
-        <span onClick={() => setRotate(!rotate)}>rotate</span>
-        <span onClick={deleteView}> {' '}Delete</span>
-      </div>
+          <span className='zoom' onClick={increaseZoom} > + </span>
+          <span className='zoom' onClick={decreaseZoom} > - </span>
+          <span onClick={() => setRotate(!rotate)}>rotate</span>
+          <span onClick={deleteView}> {' '}Delete</span>
+        </div>
 
-      <iframe
-        src={link}
-        title={name}
-        frameBorder="0"
-        height={rotate ? width : height}
-        width={rotate? height : width}
-      />
-      <p className="name">{name}</p>
-    </div>
+        <iframe
+          src={link}
+          title={name}
+          frameBorder="0"
+          height={rotate ? width : height}
+          width={rotate? height : width}
+        />
+        <p className="name">{name}</p>
+      </div>
     </div>
   )
 }
