@@ -3,6 +3,14 @@ import './style.scss'
 import { getHeightAndWidth } from '../../utils';
 import { useDispatch } from 'react-redux';
 import { REMOVE_VIEW } from '../../actions/types';
+import { SortableElement, SortableHandle } from 'react-sortable-hoc';
+import { DragIcon } from '../icons/index';
+
+const DragHandle = SortableHandle(() => (
+  <div className="drag-handle">
+    <DragIcon />
+  </div>
+))
 
 const ViewPort = ({
   view: { size, name, id },
@@ -18,11 +26,13 @@ const ViewPort = ({
   const deleteView = () => dispatch({ type:REMOVE_VIEW, payload: { id} })
 
   return (
+    <div>
     <div className='viewport' style={{ transform: `scale(${zoom})` }}>
       <div className="options">
         {/* TODO */}
           {/* dragHandle */}
           {/* reload button */}
+          <DragHandle />
         <span className='zoom' onClick={increaseZoom} > + </span>
         <span className='zoom' onClick={decreaseZoom} > - </span>
         <span onClick={() => setRotate(!rotate)}>rotate</span>
@@ -38,7 +48,8 @@ const ViewPort = ({
       />
       <p className="name">{name}</p>
     </div>
+    </div>
   )
 }
 
-export default ViewPort
+export default SortableElement(ViewPort)

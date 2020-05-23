@@ -22,3 +22,7 @@ p, h1, h2, h3, h4 {
   display: flex;
   height: calc(100vh - 60px);
 }
+
+.drag-handle {
+  cursor: move;
+}
