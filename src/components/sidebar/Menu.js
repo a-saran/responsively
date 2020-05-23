@@ -2,10 +2,11 @@ import React from 'react'
 import { useDispatch } from 'react-redux';
 import { SortableElement, SortableHandle } from 'react-sortable-hoc';
 import { REMOVE_VIEW } from '../../actions/types';
+import { DragIcon } from '../icons/index';
 
 const DragHandle = SortableHandle(() => (
   <div className="drag-handle">
-    @
+    <DragIcon />
   </div>
 ))
 
