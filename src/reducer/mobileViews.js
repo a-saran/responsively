@@ -31,6 +31,12 @@ const initialState = {
       size: '375x812',
       name: 'iphone X'
     },
+    {
+      id: 7,
+      size: '414x736',
+      name: 'iphone 6/7/8 +',
+      device: 'mob'
+    },
   ],
 }
 
