@@ -29,7 +29,7 @@ const Sidebar = ({ isOpen }) => {
   }
 
   return (
-    <Container isOpen={isOpen} onSortEnd={onSortEnd} axis='y'>
+    <Container isOpen={isOpen} onSortEnd={onSortEnd} axis='y' useDragHandle>
       <div className="menu_container">
         {selectedViews.map((view, index) => (
           <Menu key={view.id} view={view} index={index} />

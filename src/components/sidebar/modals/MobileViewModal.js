@@ -4,7 +4,7 @@ import { Modal } from 'react-responsive-modal';
 import { ADD_VIEW } from '../../../actions/types';
 import { PlusIcon } from '../../icons';
 
-const MobileViewModal = ({ data }) => {
+const MobileViewModal = ({ data, header }) => {
   const [open, setOpen] = useState(false);
   const [selectedDevices, setSelectedDevices] = useState(null);
   const dispatch = useDispatch();
@@ -20,7 +20,7 @@ const MobileViewModal = ({ data }) => {
 
   return (
     <div className='views-modal'>
-      <div className="view-btn" onClick={() => setOpen(true)}> <PlusIcon /> {' '}Mobile views</div>
+      <div className="view-btn" onClick={() => setOpen(true)}> <PlusIcon /> {header}</div>
       <Modal
         open={open}
         onClose={() => setOpen(false)}
@@ -31,7 +31,7 @@ const MobileViewModal = ({ data }) => {
         }}
         center
       >
-        <h2 className='modal-header'>Simple centered modal</h2>
+        <h2 className='modal-header'>Select {header}</h2>
         <div className="views-list">
           {data.map(device => (
             <div className="device" onClick={() => addDevice(device)}>{device.name}</div>

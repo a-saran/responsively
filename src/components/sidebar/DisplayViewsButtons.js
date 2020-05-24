@@ -16,7 +16,10 @@ const DisplayViewOptions = ({ data }) => {
   return (
     <div className='display-views'>
       <div className="display-view">
-        <MobileViewModal data={mobViews}/>
+        <MobileViewModal data={mobViews} header='Mobile Views'/>
+      </div>
+      <div className="display-view">
+        <MobileViewModal data={tabViews} header='Tab Views'/>
       </div>
     </div>
   )
