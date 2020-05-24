@@ -38,6 +38,12 @@
       .close {
         cursor: pointer;
       }
+
+      .size {
+        font-size: 10px;
+        text-align: center;
+        color: $grey4;
+      }
       
       &:hover {
         transform: scale(1.05);

@@ -15,7 +15,10 @@ const Menu = ({ view: { name, id, size } }) => {
   return (
     <div className="menu">
       <DragHandle />
-      <span>{name}</span>
+      <div>
+        <div>{name}</div>
+        <div className='size'>{size}</div>
+      </div>
       <span className='close' onClick={() => dispatch({type: REMOVE_VIEW, payload: { id }})}>
         <RemoveIcon color2='#7b7b7b' color1='#1f2021' width='18px'/>
       </span>
