@@ -7,6 +7,8 @@ import { PlusIcon } from '../../icons';
 const MobileViewModal = ({ data, header }) => {
   const [open, setOpen] = useState(false);
   const [selectedDevices, setSelectedDevices] = useState(null);
+  const [filteredData, setFilteredData] = useState(data);
+  const [searchText, setSearchText] = useState('');
   const dispatch = useDispatch();
 
   const addDevice = (device) => {
@@ -16,6 +18,12 @@ const MobileViewModal = ({ data, header }) => {
   const setSelected = () => {
     dispatch({ type: ADD_VIEW, payload: selectedDevices })
     setOpen(false)
+  }
+
+  const onChangeSearchText = ({ target: { value }}) => {
+    setSearchText(value);
+    const newData = data.filter(device => device.name.toLowerCase().includes(value.toLowerCase()))
+    setFilteredData(newData)
   }
 
   return (
@@ -32,8 +40,9 @@ const MobileViewModal = ({ data, header }) => {
         center
       >
         <h2 className='modal-header'>Select {header}</h2>
+        <input className='input' type="text" placeholder='Search' onChange={onChangeSearchText} value={searchText} />
         <div className="views-list">
-          {data.map(device => (
+          {filteredData.map(device => (
             <div className="device" onClick={() => addDevice(device)}>{device.name}</div>
           ))}
         </div>

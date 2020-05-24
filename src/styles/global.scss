@@ -48,6 +48,19 @@ p, h1, h2, h3, h4 {
       margin-bottom: 10px;
       color: $grey3;
     }
+    .input {
+      padding: 10px;
+      background: transparent;
+      border: none;
+      outline: none;
+      width: 100%;
+      color: $grey4;
+      font-size: 16px;
+      box-shadow: $box-shadow-input;
+      box-sizing: border-box;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
 
     .views-list {
       display: flex;
@@ -57,6 +70,8 @@ p, h1, h2, h3, h4 {
       overflow-y: scroll;
       overflow-x: hidden;
       border-bottom: 1px solid #ddd;
+      margin: 5px 0;
+      min-height: 200px;
 
       .device {
         margin: 5px;
@@ -64,6 +79,8 @@ p, h1, h2, h3, h4 {
         cursor: pointer;
         border-radius: 4px;
         background: $grey4;
+        height: max-content;
+
         &:hover {
           box-shadow: $box-shadow-viewport;
         }
@@ -72,6 +89,7 @@ p, h1, h2, h3, h4 {
 
     .selected-device {
       border-bottom: 1px solid #ddd;
+
       .device {
         padding: 5px;
         margin: 10px 5px;
@@ -85,6 +103,7 @@ p, h1, h2, h3, h4 {
     .footer {
       text-align: right;
       margin: 10px;
+      
       .btn {
         padding: 10px;
         background: $grey2;
