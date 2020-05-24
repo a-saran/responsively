@@ -47,8 +47,7 @@ export default function(state=initialState, action) {
   switch(type) {
     case ADD_VIEW:
       const shouldAddView = selectedViews.filter(view => view.id === payload.id)
-
-      if(shouldAddView.length > 0) {
+      if(shouldAddView.length === 0) {
         const newView = initialViews.filter(view => view.id === payload.id)
         return {
           ...state,

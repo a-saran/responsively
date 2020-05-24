@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Provider } from 'react-redux';
 import store from './store';
 import './styles/global.scss';
+import 'react-responsive-modal/styles.css';
 //components
 import Header from './components/header';
 import Sidebar from './components/sidebar';

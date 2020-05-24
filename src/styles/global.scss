@@ -26,3 +26,82 @@ p, h1, h2, h3, h4 {
 .drag-handle {
   cursor: move;
 }
+
+.app-modal-overlay {
+  .app-modal {
+    width: 100%;
+    border-radius: 8px;
+    max-width: 550px;
+    background: $grey2;
+
+    button {
+      outline: none;
+    }
+
+    .close-icon {
+      cursor: pointer;
+    }
+
+    &.lg {
+      max-width: 1000px;
+    }
+
+    .modal-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      color: $grey3;
+    }
+
+    .views-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-height: 400px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      border-bottom: 1px solid #ddd;
+
+      .device {
+        margin: 5px;
+        padding: 8px 10px;
+        cursor: pointer;
+        border-radius: 4px;
+        background: $grey4;
+        &:hover {
+          box-shadow: $box-shadow-viewport;
+        }
+      }
+    }
+
+    .selected-device {
+      border-bottom: 1px solid #ddd;
+      .device {
+        padding: 5px;
+        margin: 10px 5px;
+        background: $grey3;
+        display: inline-block;
+        box-shadow: $box-shadow-viewport;
+        border-radius: 4px;
+      }
+    }
+
+    .footer {
+      text-align: right;
+      margin: 10px;
+      .btn {
+        padding: 10px;
+        background: $grey2;
+        color: $grey3;
+        min-width: 100px;
+        margin: 0  0 0 auto;
+        border: none;
+        border-radius: 6px;
+        box-shadow: $box-shadow-viewport;
+        &:hover {
+          box-shadow: $box-shadow-menu;
+        }
+      }
+    }
+  }
+}

@@ -1,22 +1,26 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import { SortableContainer } from 'react-sortable-hoc';
 import { arrayMove } from '../../utils';
-import { getSelected } from '../../actions/viewSelectors';
+import { getSelected, getAllViews } from '../../actions/viewSelectors';
 import './style.scss'
 import Menu from './Menu';
 import { SET_SELECTED } from '../../actions/types';
 import { AddIcon } from '../icons';
+import DisplayViewOptions from './DisplayViewsButtons';
 
 const Container = SortableContainer(({ children, isOpen }) => (
-  <div className={`sidebar_container${isOpen ? ' open' : ''}`}>
-    {children}
-    <div className='add-icon'><AddIcon /></div>
-  </div>
+  <Fragment>
+    <div className={`sidebar_container${isOpen ? ' open' : ''}`}>
+      {children}
+      <div className='add-icon'><AddIcon /></div>
+    </div>
+  </Fragment>
 ));
 
 const Sidebar = ({ isOpen }) => {
   const selectedViews = useSelector(getSelected); 
+  const allViews = useSelector(getAllViews); 
   const dispatch = useDispatch();
 
   const onSortEnd = ({ oldIndex, newIndex }) => {
@@ -26,9 +30,12 @@ const Sidebar = ({ isOpen }) => {
 
   return (
     <Container isOpen={isOpen} onSortEnd={onSortEnd} axis='y'>
-      {selectedViews.map((view, index) => (
-        <Menu key={view.id} view={view} index={index} />
-      ))}
+      <div className="menu_container">
+        {selectedViews.map((view, index) => (
+          <Menu key={view.id} view={view} index={index} />
+        ))}
+      </div>
+      <DisplayViewOptions data={allViews}/>
     </Container>
   )
 }
