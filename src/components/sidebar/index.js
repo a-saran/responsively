@@ -6,10 +6,12 @@ import { getSelected } from '../../actions/viewSelectors';
 import './style.scss'
 import Menu from './Menu';
 import { SET_SELECTED } from '../../actions/types';
+import { AddIcon } from '../icons';
 
 const Container = SortableContainer(({ children, isOpen }) => (
   <div className={`sidebar_container${isOpen ? ' open' : ''}`}>
     {children}
+    <div className='add-icon'><AddIcon /></div>
   </div>
 ));
 

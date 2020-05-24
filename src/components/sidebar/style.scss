@@ -6,6 +6,7 @@
   transition: all .2s linear;
   background: $grey2;
   position: relative;
+  z-index: 0;
   box-shadow: 0px 7px 6px 2px #616161;
 
   &.open {
@@ -13,6 +14,19 @@
     width: 0;
     opacity: 0;
     overflow: hidden;
+  }
+
+  .add-icon {
+    display: inline-block;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    padding: 5px;
+    height: 100px;
+    box-shadow: 0 0 26px 7px #1f2021;
   }
 
   .menu {
