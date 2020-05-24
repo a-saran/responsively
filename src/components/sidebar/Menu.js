@@ -2,7 +2,7 @@ import React from 'react'
 import { useDispatch } from 'react-redux';
 import { SortableElement, SortableHandle } from 'react-sortable-hoc';
 import { REMOVE_VIEW } from '../../actions/types';
-import { DragIcon } from '../icons/index';
+import { DragIcon, RemoveIcon } from '../icons/index';
 
 const DragHandle = SortableHandle(() => (
   <div className="drag-handle">
@@ -16,7 +16,9 @@ const Menu = ({ view: { name, id, size } }) => {
     <div className="menu">
       <DragHandle />
       <span>{name}</span>
-      <span className='close' onClick={() => dispatch({type: REMOVE_VIEW, payload: { id }})}>X</span>
+      <span className='close' onClick={() => dispatch({type: REMOVE_VIEW, payload: { id }})}>
+        <RemoveIcon color2='#7b7b7b' color1='#1f2021' width='18px'/>
+      </span>
     </div>
   )
 }

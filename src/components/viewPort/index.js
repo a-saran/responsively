@@ -4,7 +4,14 @@ import { getHeightAndWidth } from '../../utils';
 import { useDispatch } from 'react-redux';
 import { REMOVE_VIEW } from '../../actions/types';
 import { SortableElement, SortableHandle } from 'react-sortable-hoc';
-import { DragIcon, PlusIcon, MinusIcon, RotateIcon, RefreshIcon, RemoveIcon } from '../icons/index';
+import {
+  DragIcon,
+  PlusIcon,
+  MinusIcon,
+  RotateIcon,
+  RefreshIcon,
+  RemoveIcon,
+} from '../icons/index';
 
 const DragHandle = SortableHandle(() => (
   <div className="drag-handle">
@@ -35,8 +42,6 @@ const ViewPort = ({
     <div>
       <div className='viewport' style={{ transform: `scale(${zoom})` }}>
         <div className="options">
-          {/* TODO */}
-            {/* reload button */}
           <DragHandle />
           <span className='zoom' onClick={increaseZoom} title='Zoom in'><PlusIcon /></span>
           <span className='zoom' onClick={decreaseZoom} title='Zoom out'><MinusIcon /></span>

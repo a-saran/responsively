@@ -17,8 +17,14 @@
     align-items: center;
     margin-bottom: 5px;
     padding: 5px;
+
     .zoom, .rotate, .refresh, .remove {
       cursor: pointer;
+      filter: drop-shadow(1px 1px 0px #ddd);
+
+      &:hover {
+        filter: drop-shadow(1px 1px 1px #fff);
+      }
     }
   }
 

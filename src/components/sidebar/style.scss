@@ -22,13 +22,16 @@
     box-shadow: $box-shadow-menu;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background: $grey2;
     transition: all .1s linear;
     color: $grey3;
     box-sizing: border-box;
+
     .close {
       cursor: pointer;
     }
+    
     &:hover {
       transform: scale(1.05);
     }
