@@ -80,6 +80,13 @@ p, h1, h2, h3, h4 {
         border-radius: 4px;
         background: $grey4;
         height: max-content;
+        border: 1px solid transparent;
+
+        &.selected {
+          border: 1px solid red;
+          color: $grey3;
+          background: $grey2;
+        }
 
         &:hover {
           box-shadow: $box-shadow-viewport;
