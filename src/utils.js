@@ -7,8 +7,6 @@ export const arrayMove = (array, from, to) => {
 };
 
 export const filterWithoutDuplicate = (a, b) => {
-  console.log(a)
-  console.log(b)
   let withoutDuplicate = [];
 
   for (let i = 0; i < b.length; i++) {

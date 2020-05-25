@@ -1,5 +1,5 @@
-import React, { useState, useEffect, Fragment } from 'react'
-import './style.scss'
+import React, { useState, useEffect } from 'react';
+import './style.scss';
 import { SortableContainer } from 'react-sortable-hoc';
 import ViewPort from '../viewPort/index';
 import { useSelector, useDispatch } from 'react-redux';
@@ -29,7 +29,6 @@ const Views = () => {
   }, [])
 
   const onSortEnd = ({ oldIndex, newIndex }) => {
-    console.log({ oldIndex, newIndex })
     const newArray = arrayMove(selectedViews, oldIndex, newIndex);
     dispatch({ type:SET_SELECTED, payload: { newViews: newArray } })
   }

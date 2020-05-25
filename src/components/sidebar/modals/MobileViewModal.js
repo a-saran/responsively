@@ -39,7 +39,13 @@ const MobileViewModal = ({ data, header }) => {
   const renderDevice = (device) => {
     const isSelected = selectedDevices.map(d => d.id).indexOf(device.id)
     return (
-      <Device device={device} onSelect={addDevice} removeSelected={removeSelected} selected={isSelected !== -1}/>
+      <Device
+        key={device.id}
+        device={device}
+        onSelect={addDevice}
+        removeSelected={removeSelected}
+        selected={isSelected !== -1}
+      />
     )
   }
 
@@ -57,14 +63,20 @@ const MobileViewModal = ({ data, header }) => {
         center
       >
         <h2 className='modal-header'>Select {header}</h2>
-        <input className='input' type="text" placeholder='Search' onChange={onChangeSearchText} value={searchText} />
+        <input 
+          className='input'
+          type="text"
+          placeholder='Search'
+          onChange={onChangeSearchText}
+          value={searchText}
+        />
         <div className="views-list">
           {filteredData.map(renderDevice)}
         </div>
         {selectedDevices && (
           <div className="selected-device">
             {selectedDevices.map(device => (
-              <div className="device">{device.name}</div>
+              <div key={device.id} className="device">{device.name}</div>
             ))}
           </div>
         )}
