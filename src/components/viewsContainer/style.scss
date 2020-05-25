@@ -1,12 +1,24 @@
 @import '../../styles/variables';
 
-.views_container {
+.container {
   flex: 1;
-  padding: 10px;
   width: 100%;
-  background-image: linear-gradient(to right, #404040 1px, transparent 1px), linear-gradient(#404040 1px, transparent 1px);
-  background-size: 15px 15px;
-  background-color: $grey2;
+  height: 100%;
   overflow: scroll;
-  display: flex;
+  .views_container {
+    overflow: scroll;
+    padding: 10px;
+    background-image: linear-gradient(to right, #404040 1px, transparent 1px), linear-gradient(#404040 1px, transparent 1px);
+    background-size: 15px 15px;
+    background-color: $grey2;
+    display: flex;
+  }
+  .offline {
+    text-align: center;
+    background: $grey3;
+    color: $grey2;
+    box-shadow: 0 0 13px 9px $grey2;
+    position: relative;
+    font-size: 14px;
+  }
 }

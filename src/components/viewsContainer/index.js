@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect, Fragment } from 'react'
 import './style.scss'
 import { SortableContainer } from 'react-sortable-hoc';
 import ViewPort from '../viewPort/index';
@@ -14,9 +14,19 @@ const Container = SortableContainer(({ children }) => (
 ));
 
 const Views = () => {
+  const [isOffline, setIsOffline] = useState(false);
   const selectedViews = useSelector(getSelected);
   const link = useSelector(getLink);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    window.addEventListener('offline', () => setIsOffline(true))
+    window.addEventListener('online', () => setIsOffline(false))
+    return () => {
+      window.removeEventListener('offline', () => setIsOffline(true))
+      window.removeEventListener('online', () => setIsOffline(false))
+    }
+  }, [])
 
   const onSortEnd = ({ oldIndex, newIndex }) => {
     console.log({ oldIndex, newIndex })
@@ -25,11 +35,14 @@ const Views = () => {
   }
 
   return (
-    <Container onSortEnd={onSortEnd} axis='x' useDragHandle>
-      {selectedViews.map((view, i) => (
-        <ViewPort key={i} keyValue={i} view={view} link={link} index={i}/>
-      ))}
-    </Container>
+    <div className='container'>
+      {isOffline && (<div className='offline'> No internet Connection</div>)}
+      <Container onSortEnd={onSortEnd} axis='x' useDragHandle>
+        {selectedViews.map((view, i) => (
+          <ViewPort key={i} keyValue={i} view={view} link={link} index={i}/>
+        ))}
+      </Container>
+    </div>
   )
 }
 

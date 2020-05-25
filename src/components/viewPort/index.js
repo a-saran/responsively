@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, memo } from 'react'
 import './style.scss'
 import { getHeightAndWidth } from '../../utils';
 import { useDispatch } from 'react-redux';
@@ -65,4 +65,4 @@ const ViewPort = ({
   )
 }
 
-export default SortableElement(ViewPort)
+export default memo(SortableElement(ViewPort))
