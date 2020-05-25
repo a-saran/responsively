@@ -12,6 +12,7 @@ import {
   RefreshIcon,
   RemoveIcon,
 } from '../icons/index';
+import { toast } from 'react-toastify';
 
 const DragHandle = SortableHandle(() => (
   <div className="drag-handle">
@@ -31,7 +32,10 @@ const ViewPort = ({
 
   const increaseZoom = () =>  zoom < 1.3 ? setZoom(zoom + 0.1) : null
   const decreaseZoom = () => zoom > 0.4 ? setZoom(zoom - 0.1) : null
-  const deleteView = () => dispatch({ type:REMOVE_VIEW, payload: { id} })
+  const deleteView = () => {
+    dispatch({ type:REMOVE_VIEW, payload: { id} })
+    toast('Device removed')
+  }
 
   const reload = () => {
     const src = iframeRef.current.src

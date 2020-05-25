@@ -4,6 +4,7 @@ import { Modal } from 'react-responsive-modal';
 import { ADD_VIEWS } from '../../../actions/types';
 import { PlusIcon } from '../../icons';
 import Device from './Device';
+import { toast } from 'react-toastify';
 
 const MobileViewModal = ({ data, header }) => {
   const [open, setOpen] = useState(false);
@@ -28,6 +29,7 @@ const MobileViewModal = ({ data, header }) => {
     dispatch({ type: ADD_VIEWS, payload: { newValues: selectedDevices} })
     setOpen(false)
     setSelectedDevices([])
+    toast(selectedDevices.length > 1 ? 'Multiple Device Added': 'Device Added')
   }
 
   const onChangeSearchText = ({ target: { value }}) => {
