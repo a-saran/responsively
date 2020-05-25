@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Modal } from 'react-responsive-modal';
-import { ADD_VIEW } from '../../../actions/types';
+import { ADD_VIEWS } from '../../../actions/types';
 import { PlusIcon } from '../../icons';
 
 const MobileViewModal = ({ data, header }) => {
   const [open, setOpen] = useState(false);
-  const [selectedDevices, setSelectedDevices] = useState(null);
+  const [selectedDevices, setSelectedDevices] = useState([]);
   const [filteredData, setFilteredData] = useState(data);
   const [searchText, setSearchText] = useState('');
   const dispatch = useDispatch();
 
   const addDevice = (device) => {
-    setSelectedDevices(device)
+    setSelectedDevices([...selectedDevices, device])
   }
 
   const setSelected = () => {
-    dispatch({ type: ADD_VIEW, payload: selectedDevices })
+    dispatch({ type: ADD_VIEWS, payload: { newValues: selectedDevices} })
     setOpen(false)
   }
 
@@ -46,9 +46,13 @@ const MobileViewModal = ({ data, header }) => {
             <div className="device" onClick={() => addDevice(device)}>{device.name}</div>
           ))}
         </div>
-        {selectedDevices && (<div className="selected-device">
-          <div className="device">{selectedDevices.name}</div>
-        </div>)}
+        {selectedDevices && (
+          <div className="selected-device">
+            {selectedDevices.map(device => (
+              <div className="device">{device.name}</div>
+            ))}
+          </div>
+        )}
         <div className='footer'>
           <button className='btn' onClick={setSelected}>Select</button>
         </div>

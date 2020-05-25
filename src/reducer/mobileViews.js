@@ -1,11 +1,12 @@
 import {
   REMOVE_VIEW,
   ADD_VIEW,
+  ADD_VIEWS,
   SET_LINK,
   SET_SELECTED
 } from '../actions/types';
 import { mobileViews } from '../data';
-
+import { filterWithoutDuplicate } from '../utils';
 
 const initialState = {
   link: 'https://saran.work/',
@@ -55,7 +56,14 @@ export default function(state=initialState, action) {
         }
       }
       return state;
-      
+
+    case ADD_VIEWS:
+      let newValues = filterWithoutDuplicate(selectedViews, payload.newValues)
+      return {
+        ...state,
+        selectedViews: [...selectedViews, ...newValues]
+      }
+
     case REMOVE_VIEW:
       const filteredSelectedViews = selectedViews.filter(view => view.id !== payload.id)
       return {

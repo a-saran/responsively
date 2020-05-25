@@ -20,7 +20,8 @@
     overflow: hidden;
   }
   .menu_container {
-    min-height: 500px;
+    flex: 1;
+    overflow: scroll;
 
     .menu {
       margin: 15px 10px;
