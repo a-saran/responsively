@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import { Provider } from 'react-redux';
 import store from './store';
 import './styles/global.scss';
+import { ToastContainer } from 'react-toastify';
 import 'react-responsive-modal/styles.css';
+import 'react-toastify/dist/ReactToastify.css';
 //components
 import Header from './components/header';
 import Sidebar from './components/sidebar';
@@ -15,6 +17,17 @@ const App = () => {
 
   return (
     <Provider store={store}>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={4000}
+        hideProgressBar
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover={false}
+        />
       <div className="App">
         <Header toggleSidebar={toggleSidebar} isOpen={isOpen}/>
         <div className="main_container">

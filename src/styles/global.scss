@@ -127,3 +127,17 @@ p, h1, h2, h3, h4 {
     }
   }
 }
+
+.Toastify{
+  .Toastify__toast--default {
+    background: $grey2;
+    box-shadow: 0 0 11px 1px $grey3;
+    border-radius: 10px;
+    .Toastify__toast-body {
+      color: $grey3;
+    }
+    .Toastify__close-button > svg {
+      fill: $white;
+    }
+  }
+}
