@@ -1,0 +1,21 @@
+{
+  "name": "responsively",
+  "version": "1.0.0",
+  "description": "",
+  "main": "responsively-app/build/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "window": {
+    "title": "Responsively",
+    "icon": "./responsively/build/logo192.png",
+    "width": 1000,
+    "height": 1000,
+    "min_width": 1000,
+    "min-height": 1000,
+    "position": "center"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
