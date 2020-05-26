@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react';
 
 const Menu = ({ onClick, isOpen }) => {
   return (
@@ -10,4 +10,4 @@ const Menu = ({ onClick, isOpen }) => {
   )
 }
 
-export default Menu
+export default memo(Menu);
