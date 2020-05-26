@@ -85,6 +85,7 @@ const MobileViewModal = ({ data, header }) => {
           )}
         </div>
         <div className='modal-footer'>
+          <button className='btn close' onClick={() => setOpen(false)}>Close</button>
           <button className='btn' onClick={setSelected}>Select</button>
         </div>
       </Modal>

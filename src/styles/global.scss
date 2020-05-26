@@ -47,12 +47,12 @@ p, h1, h2, h3, h4 {
       padding-bottom: 10px;
       margin-bottom: 10px;
       color: $grey1;
-      background: $grey3;
+      background: $grey4;
       padding: 15px;
     }
     
     .modal-body {
-      padding: 15px;
+      padding: 15px 15px 0 15px;
       .input {
         padding: 10px;
         background: transparent;
@@ -117,19 +117,26 @@ p, h1, h2, h3, h4 {
       text-align: right;
       // margin: 10px;
       padding: 15px;
-      background: $grey3;
+      // background: $grey4;
       
       .btn {
         padding: 10px;
-        background: $grey2;
-        color: $grey3;
+        background: $grey3;
+        color: $grey1;
         min-width: 100px;
-        margin: 0  0 0 auto;
+        margin: 0 0 0 auto;
         border: none;
         border-radius: 6px;
-        box-shadow: $box-shadow-viewport;
+        box-shadow: $box-shadow-menu;
+        font-weight: bold;
+
+        &.close {
+          margin-right: 10px;
+          background: $grey2;
+          color: $grey3;
+        }
         &:hover {
-          box-shadow: $box-shadow-menu;
+          box-shadow: $box-shadow-viewport;
         }
       }
     }
