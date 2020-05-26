@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, memo } from 'react'
 
 const Device = ({ onSelect, removeSelected, device, selected }) => {
   const [isSelected, setIsSelected] = useState(selected);
@@ -20,4 +20,4 @@ const Device = ({ onSelect, removeSelected, device, selected }) => {
   )
 }
 
-export default Device;
+export default memo(Device);

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, memo } from 'react';
 import { useDispatch } from 'react-redux';
 import { Modal } from 'react-responsive-modal';
 import { ADD_VIEWS } from '../../../actions/types';
@@ -97,4 +97,4 @@ const MobileViewModal = ({ data, header }) => {
   )
 }
 
-export default MobileViewModal
+export default memo(MobileViewModal)

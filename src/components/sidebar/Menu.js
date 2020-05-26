@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { useDispatch } from 'react-redux';
 import { SortableElement, SortableHandle } from 'react-sortable-hoc';
 import { REMOVE_VIEW } from '../../actions/types';
@@ -30,4 +30,4 @@ const Menu = ({ view: { name, id, size } }) => {
   )
 }
 
-export default SortableElement(Menu)
+export default memo(SortableElement(Menu))

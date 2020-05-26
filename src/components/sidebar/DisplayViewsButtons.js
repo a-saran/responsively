@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import MobileViewModal from './modals/MobileViewModal';
 
 const DisplayViewOptions = ({ data }) => {
@@ -25,4 +25,4 @@ const DisplayViewOptions = ({ data }) => {
   )
 }
 
-export default DisplayViewOptions;
+export default memo(DisplayViewOptions);

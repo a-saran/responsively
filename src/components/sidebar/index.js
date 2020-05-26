@@ -1,13 +1,13 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, memo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { SortableContainer } from 'react-sortable-hoc';
 import { arrayMove } from '../../utils';
 import { getSelected, getAllViews } from '../../actions/viewSelectors';
-import './style.scss'
-import Menu from './Menu';
 import { SET_SELECTED } from '../../actions/types';
 import { AddIcon } from '../icons';
 import DisplayViewOptions from './DisplayViewsButtons';
+import Menu from './Menu';
+import './style.scss'
 
 const Container = SortableContainer(({ children, isOpen }) => (
   <Fragment>
@@ -41,4 +41,4 @@ const Sidebar = ({ isOpen }) => {
 }
 
 
-export default Sidebar
+export default memo(Sidebar);
