@@ -10,7 +10,7 @@ const Header = ({ toggleSidebar, isOpen }) => {
     <div className='header'>
       <Menu onClick={toggleSidebar} isOpen={isOpen}/>
       <Input />
-      <a href="https://github.com/" target='_blank' rel="noopener noreferrer">
+      <a href="https://github.com/a-saran/responsively" target='_blank' rel="noopener noreferrer">
         <GitIcon />
       </a>
     </div>
