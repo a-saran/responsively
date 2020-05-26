@@ -65,24 +65,26 @@ const MobileViewModal = ({ data, header }) => {
         center
       >
         <h2 className='modal-header'>Select {header}</h2>
-        <input 
-          className='input'
-          type="text"
-          placeholder='Search'
-          onChange={onChangeSearchText}
-          value={searchText}
-        />
-        <div className="views-list">
-          {filteredData.map(renderDevice)}
-        </div>
-        {selectedDevices && (
-          <div className="selected-device">
-            {selectedDevices.map(device => (
-              <div key={device.id} className="device">{device.name}</div>
-            ))}
+        <div className="modal-body">
+          <input 
+            className='input'
+            type="text"
+            placeholder='Search'
+            onChange={onChangeSearchText}
+            value={searchText}
+          />
+          <div className="views-list">
+            {filteredData.map(renderDevice)}
           </div>
-        )}
-        <div className='footer'>
+          {selectedDevices && (
+            <div className="selected-device">
+              {selectedDevices.map(device => (
+                <div key={device.id} className="device">{device.name}</div>
+              ))}
+            </div>
+          )}
+        </div>
+        <div className='modal-footer'>
           <button className='btn' onClick={setSelected}>Select</button>
         </div>
       </Modal>

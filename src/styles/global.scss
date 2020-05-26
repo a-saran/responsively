@@ -25,8 +25,9 @@ p, h1, h2, h3, h4 {
 
 .app-modal-overlay {
   .app-modal {
+    padding: 0;
     width: 100%;
-    border-radius: 8px;
+    // border-radius: 8px;
     max-width: 550px;
     background: $grey2;
 
@@ -43,73 +44,80 @@ p, h1, h2, h3, h4 {
     }
 
     .modal-header {
-      border-bottom: 1px solid #ddd;
       padding-bottom: 10px;
       margin-bottom: 10px;
-      color: $grey3;
+      color: $grey1;
+      background: $grey3;
+      padding: 15px;
     }
-    .input {
-      padding: 10px;
-      background: transparent;
-      border: none;
-      outline: none;
-      width: 100%;
-      color: $grey4;
-      font-size: 16px;
-      box-shadow: $box-shadow-input;
-      box-sizing: border-box;
-      border-radius: 10px;
-      margin-bottom: 10px;
-    }
+    
+    .modal-body {
+      padding: 15px;
+      .input {
+        padding: 10px;
+        background: transparent;
+        border: none;
+        outline: none;
+        width: 100%;
+        color: $grey4;
+        font-size: 16px;
+        box-shadow: $box-shadow-input;
+        box-sizing: border-box;
+        border-radius: 10px;
+        margin-bottom: 10px;
+      }
 
-    .views-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      max-height: 400px;
-      overflow-y: scroll;
-      overflow-x: hidden;
-      border-bottom: 1px solid #ddd;
-      margin: 5px 0;
-      min-height: 200px;
+      .views-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-height: 300px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        border-bottom: 1px solid #ddd;
+        margin: 5px 0;
+        min-height: 200px;
 
-      .device {
-        margin: 5px;
-        padding: 8px 10px;
-        cursor: pointer;
-        border-radius: 4px;
-        background: $grey4;
-        height: max-content;
-        border: 1px solid transparent;
+        .device {
+          margin: 5px;
+          padding: 8px 10px;
+          cursor: pointer;
+          border-radius: 4px;
+          background: $grey4;
+          height: max-content;
+          border: 1px solid transparent;
 
-        &.selected {
-          border: 1px solid red;
-          color: $grey3;
-          background: $grey2;
+          &.selected {
+            border: 1px solid red;
+            color: $grey3;
+            background: $grey2;
+          }
+
+          &:hover {
+            box-shadow: $box-shadow-viewport;
+          }
         }
+      }
 
-        &:hover {
+      .selected-device {
+        border-bottom: 1px solid #ddd;
+
+        .device {
+          padding: 5px;
+          margin: 10px 5px;
+          background: $grey3;
+          display: inline-block;
           box-shadow: $box-shadow-viewport;
+          border-radius: 4px;
         }
       }
     }
 
-    .selected-device {
-      border-bottom: 1px solid #ddd;
-
-      .device {
-        padding: 5px;
-        margin: 10px 5px;
-        background: $grey3;
-        display: inline-block;
-        box-shadow: $box-shadow-viewport;
-        border-radius: 4px;
-      }
-    }
-
-    .footer {
+    .modal-footer {
       text-align: right;
-      margin: 10px;
+      // margin: 10px;
+      padding: 15px;
+      background: $grey3;
       
       .btn {
         padding: 10px;
@@ -128,7 +136,7 @@ p, h1, h2, h3, h4 {
   }
 }
 
-.Toastify{
+.Toastify {
   .Toastify__toast--default {
     background: $grey2;
     box-shadow: 0 0 11px 1px $grey3;
