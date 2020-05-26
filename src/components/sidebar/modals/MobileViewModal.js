@@ -53,7 +53,7 @@ const MobileViewModal = ({ data, header }) => {
 
   return (
     <div className='views-modal'>
-      <div className="view-btn" onClick={() => setOpen(true)}> <PlusIcon /> {header}</div>
+      <div className="view-btn" onClick={() => setOpen(true)}> <PlusIcon color='#9a9a9a' width='15px'/> {header}</div>
       <Modal
         open={open}
         onClose={() => setOpen(false)}

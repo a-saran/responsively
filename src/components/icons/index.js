@@ -27,8 +27,8 @@ export const SendArrow = () => (
   </svg>
 )
 
-export const PlusIcon = () => (
-  <svg version="1.1" width='20px'  x="0px" y="0px"
+export const PlusIcon = ({ color, width }) => (
+  <svg fill={color} version="1.1" width={width || '20px'}  x="0px" y="0px"
     viewBox="0 0 512 512" style={{ enableBackground: 'new 0 0 512 512'}} xmlSpace="preserve">
     <g>
       <g>

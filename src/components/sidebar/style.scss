@@ -53,15 +53,20 @@
   }
 
   .display-views {
+    display: flex;
+    margin: 10px 0;
     .display-view {
+      width: 50%;
       .view-btn {
         display: flex;
         align-items: center;
-        padding: 10px;
+        padding: 6px;
         color: $grey4;
         cursor: pointer;
         box-shadow: $box-shadow-input;
-        border-radius: 6px;
+        border-radius: 8px;
+        margin: 2px;
+        font-size: 14px;
         svg {
           margin-right: 10px;
         }
