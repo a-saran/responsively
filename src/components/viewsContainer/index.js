@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, memo } from 'react';
 import './style.scss';
 import { SortableContainer } from 'react-sortable-hoc';
 import ViewPort from '../viewPort/index';
@@ -48,4 +48,4 @@ const Views = () => {
   )
 }
 
-export default Views
+export default memo(Views)
