@@ -11,6 +11,19 @@
   transition: all .2s ease-in-out;
   box-shadow: $box-shadow-viewport;
 
+  .size {
+    margin-top: -43px;
+    padding: 11px;
+    color: $grey3;
+    opacity: 0;
+  }
+
+  &:hover {
+    .size {
+      opacity: 1;
+    }
+  }
+
   .options {
     display: flex;
     justify-content: space-around;
@@ -32,6 +45,7 @@
     transition: all .2s ease-in-out;
   }
   .name {
+    margin: 5px 0 2px 0;
     text-align: center;
   }
 }

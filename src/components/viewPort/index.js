@@ -45,6 +45,7 @@ const ViewPort = ({
   return (
     <div>
       <div className='viewport' style={{ transform: `scale(${zoom})` }}>
+        <div className="size">{size}</div>
         <div className="options">
           <DragHandle />
           <span className='zoom' onClick={increaseZoom} title='Zoom in'><PlusIcon /></span>
