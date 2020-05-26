@@ -9,7 +9,7 @@ import { mobileViews } from '../data';
 import { filterWithoutDuplicate } from '../utils';
 
 const initialState = {
-  link: 'https://saran.work/',
+  link: '',
   initialViews: mobileViews,
   selectedViews: [
     {

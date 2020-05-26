@@ -7,8 +7,8 @@ import { getSelected, getLink } from '../../actions/viewSelectors';
 import { arrayMove } from '../../utils';
 import { SET_SELECTED } from '../../actions/types';
 
-const Container = SortableContainer(({ children }) => (
-  <div className='views_container'>
+const Container = SortableContainer(({ children, displayMsg }) => (
+  <div className={`views_container${displayMsg ? ' center': ''}`}>
     {children}
   </div>
 ));
@@ -36,8 +36,11 @@ const Views = () => {
   return (
     <div className='container'>
       {isOffline && (<div className='offline'> No internet Connection</div>)}
-      <Container onSortEnd={onSortEnd} axis='x' useDragHandle>
-        {selectedViews.map((view, i) => (
+      <Container onSortEnd={onSortEnd} axis='x' useDragHandle displayMsg={!link}>
+        {!link && (
+          <p className='no-link-msg'>Add a valid Link to view the Viewports</p>
+        )}
+        {link && selectedViews.map((view, i) => (
           <ViewPort key={i} keyValue={i} view={view} link={link} index={i}/>
         ))}
       </Container>

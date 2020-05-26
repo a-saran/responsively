@@ -5,14 +5,28 @@
   width: 100%;
   height: 100%;
   overflow: scroll;
+
+  .no-link-msg {
+    color: $grey3;
+  }
+
   .views_container {
     overflow: scroll;
     padding: 10px;
     background-image: linear-gradient(to right, #404040 1px, transparent 1px), linear-gradient(#404040 1px, transparent 1px);
     background-size: 15px 15px;
     background-color: $grey2;
+    height: max-content;
+    min-height: 100%;
+    box-sizing: border-box;
     display: flex;
+
+    &.center {
+      justify-content: center;
+      align-items: center;
+    }
   }
+
   .offline {
     text-align: center;
     background: $grey3;
