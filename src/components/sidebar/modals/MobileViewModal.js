@@ -26,10 +26,14 @@ const MobileViewModal = ({ data, header }) => {
   }
 
   const setSelected = () => {
-    dispatch({ type: ADD_VIEWS, payload: { newValues: selectedDevices} })
-    setOpen(false)
-    setSelectedDevices([])
-    toast(selectedDevices.length > 1 ? 'Multiple Device Added': 'Device Added')
+    if(selectedDevices.length) {
+      setOpen(false)
+      dispatch({ type: ADD_VIEWS, payload: { newValues: selectedDevices} })
+      setSelectedDevices([])
+      toast(selectedDevices.length > 1 ? 'Multiple Device Added': 'Device Added')
+    } else {
+      toast('Please select minimum 1 device')
+    }
   }
 
   const onChangeSearchText = ({ target: { value }}) => {
