@@ -1,6 +1,6 @@
 import React, { useState, memo } from 'react';
 import { Modal } from 'react-responsive-modal';
-import { DownloadIcon, AppleIcon } from '../icons';
+import { DownloadIcon, AppleIcon, LinuxIcon } from '../icons';
 
 const MobileViewModal = () => {
   const [open, setOpen] = useState(false);
@@ -23,6 +23,7 @@ const MobileViewModal = () => {
         </h2>
         <div className="modal-body">
           <AppleIcon />
+          <LinuxIcon />
         </div>
         <div className='modal-footer'>
           
