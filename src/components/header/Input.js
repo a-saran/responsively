@@ -27,7 +27,7 @@ const Input = () => {
   return (
     <div className={`input_container${error ? ' has-error': ''}`} onBlur={() => setError(false)}>
       <form onSubmit={onSubmit}>
-        <input type="text" placeholder='Please enter a valid Url' ref={inputRef}/>
+        <input type="text" placeholder='Please enter a valid URL' ref={inputRef}/>
         <button>
           <SendArrow />
         </button>
