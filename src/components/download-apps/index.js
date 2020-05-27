@@ -1,6 +1,6 @@
 import React, { useState, memo } from 'react';
 import { Modal } from 'react-responsive-modal';
-import { DownloadIcon } from '../icons';
+import { DownloadIcon, AppleIcon } from '../icons';
 
 const MobileViewModal = () => {
   const [open, setOpen] = useState(false);
@@ -22,7 +22,7 @@ const MobileViewModal = () => {
           Download
         </h2>
         <div className="modal-body">
-          
+          <AppleIcon />
         </div>
         <div className='modal-footer'>
           
