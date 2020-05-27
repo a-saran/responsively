@@ -22,9 +22,40 @@ const MobileViewModal = () => {
           Download
         </h2>
         <div className="modal-body">
-          <AppleIcon />
-          <LinuxIcon />
-          <WindowsIcon />
+          <div className="icon_container-1">
+            <a href="#" title='download'>
+              <div className="download-icon">
+                <AppleIcon />
+                mac os
+              </div>
+            </a>
+            <a href="#" title='download'>
+              <div className="download-icon">
+                <WindowsIcon />
+                windows-64
+              </div>
+            </a>
+            <a href="#" title='download'>
+              <div className="download-icon">
+                <LinuxIcon />
+                linux-64
+              </div>
+            </a>
+          </div>
+          <div className="icon_container-1">
+            <a href="#" title='download'>
+              <div className="download-icon">
+                <WindowsIcon />
+                windows-32
+              </div>
+            </a>
+            <a href="#" title='download'>
+              <div className="download-icon">
+                <LinuxIcon />
+                linux-32
+              </div>
+            </a>
+          </div>
         </div>
         <div className='modal-footer'>
           
