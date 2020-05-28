@@ -3,7 +3,6 @@ import './style.scss';
 import Menu from './Menu';
 import Input from './Input';
 import { GitIcon } from '../icons';
-import DownloadSection from '../download-apps';
 
 const Header = ({ toggleSidebar, isOpen }) => {
 
@@ -12,7 +11,7 @@ const Header = ({ toggleSidebar, isOpen }) => {
       <Menu onClick={toggleSidebar} isOpen={isOpen}/>
       <Input />
       <div className='header-right-section'>
-        <DownloadSection />
+        {/* <DownloadSection /> */}
         <a
           href="https://github.com/a-saran/responsively"
           target='_blank'
