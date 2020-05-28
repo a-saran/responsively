@@ -88,6 +88,33 @@
           border-radius: 4px;
         }
       }
+
+      .icon_container-1 {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-around;
+
+        &:nth-child(2) {
+          margin-top: 50px;
+        }
+
+        a {
+          text-decoration: none;
+          color:$grey4;
+          outline: none;
+        }
+
+        .download-icon {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          &:hover {
+            filter: drop-shadow(2px 4px 6px black);
+          }
+        }
+      }
     }
 
     .modal-footer {

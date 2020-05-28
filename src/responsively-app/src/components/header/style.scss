@@ -93,4 +93,15 @@
       border: 1px solid red;
     }
   }
+
+  .header-right-section {
+    display: flex;
+    align-items: center;
+    svg {
+      cursor: pointer;
+      &:first-of-type {
+        margin-right: 15px;
+      }
+    }
+  }
 }

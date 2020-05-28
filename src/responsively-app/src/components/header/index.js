@@ -3,6 +3,7 @@ import './style.scss';
 import Menu from './Menu';
 import Input from './Input';
 import { GitIcon } from '../icons';
+import DownloadSection from '../download-apps';
 
 const Header = ({ toggleSidebar, isOpen }) => {
 
@@ -10,13 +11,16 @@ const Header = ({ toggleSidebar, isOpen }) => {
     <div className='header'>
       <Menu onClick={toggleSidebar} isOpen={isOpen}/>
       <Input />
-      <a
-        href="https://github.com/a-saran/responsively"
-        target='_blank'
-        rel="noopener noreferrer"
-      >
-        <GitIcon />
-      </a>
+      <div className='header-right-section'>
+        <DownloadSection />
+        <a
+          href="https://github.com/a-saran/responsively"
+          target='_blank'
+          rel="noopener noreferrer"
+        >
+          <GitIcon />
+        </a>
+      </div>
     </div>
   )
 }
