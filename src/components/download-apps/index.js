@@ -23,19 +23,19 @@ const MobileViewModal = () => {
         </h2>
         <div className="modal-body">
           <div className="icon_container-1">
-            <a href="#" title='download'>
+            <a href="https://drive.google.com/file/d/1_C6oRYkUs42BC0IKyhZ19oVBrj65tPFR/view" title='download' target='_blank' rel="noopener noreferrer">
               <div className="download-icon">
                 <AppleIcon />
                 mac os
               </div>
             </a>
-            <a href="#" title='download'>
+            <a href="https://drive.google.com/file/d/1cAsbins_T7aVIqA7HTI19FgKfm9TjewZ/view" title='download' target='_blank' rel="noopener noreferrer">
               <div className="download-icon">
                 <WindowsIcon />
                 windows-64
               </div>
             </a>
-            <a href="#" title='download'>
+            <a href="https://drive.google.com/file/d/1rgKvWv5g-elf2gqyAPKypO9dVuLFpJmB/view" title='download' target='_blank' rel="noopener noreferrer">
               <div className="download-icon">
                 <LinuxIcon />
                 linux-64
@@ -43,13 +43,13 @@ const MobileViewModal = () => {
             </a>
           </div>
           <div className="icon_container-1">
-            <a href="#" title='download'>
+            <a href="https://drive.google.com/file/d/1GJrkPZHylqMiDOFJw4FfL6QEO8qRQ81K/view" title='download' target='_blank' rel="noopener noreferrer">
               <div className="download-icon">
                 <WindowsIcon />
                 windows-32
               </div>
             </a>
-            <a href="#" title='download'>
+            <a href="https://drive.google.com/file/d/1c5Ocgf0tYb4U3L3scuD4M40y0ePewayt/view" title='download' target='_blank' rel="noopener noreferrer">
               <div className="download-icon">
                 <LinuxIcon />
                 linux-32
