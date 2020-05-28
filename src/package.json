@@ -8,7 +8,7 @@
   },
   "window": {
     "title": "Responsively",
-    "icon": "./responsively/build/logo192.png",
+    "icon": "./responsively-app/build/logo192.png",
     "width": 1000,
     "height": 1000,
     "min_width": 1000,
